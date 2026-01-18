@@ -1,135 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veeranagouda Patil | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2.2rem, 5vw, 3rem);
+        }
+
+        .role {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .actions {
+            margin-top: 25px;
+        }
+
+        .actions a, .actions button {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 24px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .resume {
+            background: #22c55e;
+            color: white;
+        }
+
+        .toggle {
+            background: white;
+            color: #1e40af;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #e0e7ff;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .tech {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        ul {
+            margin-left: 18px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* DARK MODE */
+        body.dark {
+            background: #020617;
+            color: #e5e7eb;
+        }
+
+        body.dark section,
+        body.dark .card {
+            background: #020617;
+        }
+
+        body.dark .skills span {
+            background: #1e293b;
+            color: #93c5fd;
+        }
+
+        body.dark footer {
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            section {
+                padding: 50px 16px;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header class="hero">
-    <div class="container">
-        <h1>Veeranagouda Patil</h1>
-        <p class="role">Java Backend Developer</p>
-        <p class="intro">
-            I build scalable backend systems using Java & Spring Boot,
-            focusing on clean APIs, performance, and reliability.
-        </p>
-        <div class="links">
-            <a href="https://github.com/veeranagoudapatil" target="_blank">GitHub</a>
-            <a href="mailto:goudapatil567@gmail.com">Contact</a>
-        </div>
+<header>
+    <h1>Veeranagouda Patil</h1>
+    <p class="role">Java Backend Developer | Spring Boot</p>
+    <p class="intro">
+        I build scalable backend systems, secure REST APIs,
+        and high-performance microservices.
+    </p>
+
+    <div class="actions">
+        <a href="resume.pdf" class="resume" download>📄 Download Resume</a>
+        <button class="toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
     </div>
 </header>
 
-<main class="container">
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>☕ Java</span>
+        <span>🌱 Spring Boot</span>
+        <span>🔐 Spring Security</span>
+        <span>🔁 Microservices</span>
+        <span>📡 REST APIs</span>
+        <span>🧵 Kafka</span>
+        <span>⚡ Redis</span>
+        <span>🗄️ MySQL</span>
+        <span>☁️ AWS</span>
+        <span>Spring MVC</span>
+        <span>Intellij</span>
+    </div>
+</section>
 
-    <!-- Skills -->
-    <section>
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>Spring Security</span>
-            <span>Microservices</span>
-            <span>REST APIs</span>
-            <span>Hibernate & JPA</span>
-            <span>MySQL</span>
-            <span>Redis</span>
-            <span>Kafka</span>
-            <span>Multithreading</span>
-            <span>DSA</span>
-            <span>Git & GitHub</span>
-            <span>Spring MVC</span>
-            <span>Intellij</span>
+<section>
+    <h2>Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>PG Management System</h3>
+            <p>Backend platform to manage buildings, rooms, tenants, and feedback workflows.</p>
+            <p class="tech">Java | Spring Boot | MySQL | JPA | Maven | Git</p>
         </div>
-    </section>
 
-    <!-- Projects -->
-    <section>
-        <h2>Projects</h2>
-        <div class="grid">
-
-            <div class="card">
-                <h3>PG Management System</h3>
-                <p>
-                    Backend system for managing PG buildings, rooms,
-                    tenants, and feedback flow between owners and customers.
-                </p>
-                <p class="tech">Java | Spring Boot | MySQL | JPA | Maven | Git</p>
-            </div>
-
-            <div class="card">
-                <h3>Travels & Trip Management System</h3>
-                <p>
-                    Travel management platform for trip planning, bookings,
-                    customer handling, and itinerary management.
-                </p>
-                <p class="tech">Java | Spring Boot | MySQL | AWS | JPA | Maven | Git</p>
-            </div>
-
+        <div class="card">
+            <h3>Travels & Trip Management</h3>
+            <p>Trip planning, booking management, itinerary handling, and customer communication.</p>
+            <p class="tech">Java | Spring Boot | MySQL | AWS | JPA | Maven | Git</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Experience -->
-    <section>
-        <h2>Professional Experience</h2>
-        <div class="timeline">
-
-            <div class="card">
-                <h3>Senior Associate Consultant</h3>
-                <p class="company">Infosys Ltd · Apr 2024 – Present</p>
-                <ul>
-                    <li>Developed UKG–LinkedIn integration for job applications.</li>
-                    <li>Implemented data validation for third-party job feeds.</li>
-                    <li>Worked with cross-functional Agile teams.</li>
-                </ul>
-                <p class="tech">Java 8, Spring Boot, Maven, Gradle, SQL, Git</p>
-            </div>
-
-            <div class="card">
-                <h3>Software Engineer</h3>
-                <p class="company">Altruist Technologies · Apr 2023 – Mar 2024</p>
-                <ul>
-                    <li>Built Java microservices for aviation operations.</li>
-                    <li>Designed REST APIs for scheduling & flight systems.</li>
-                    <li>Optimized Oracle & PostgreSQL queries.</li>
-                </ul>
-                <p class="tech">Java, Spring Boot, Microservices, Oracle, PostgreSQL, Maven, Git</p>
-            </div>
-
-            <div class="card">
-                <h3>Software Engineer</h3>
-                <p class="company">Idisha Info Labs (Quick Ride) · Dec 2020 – Feb 2023</p>
-                <ul>
-                    <li>Developed backend services for ride booking & payments.</li>
-                    <li>Integrated Android apps with Spring Boot APIs.</li>
-                    <li>Used Kafka & Redis for async processing and caching.</li>
-                </ul>
-                <p class="tech">Java, Spring Boot, Hibernate, Kafka, Redis, Spring MVC, Maven, LRU cache, Android</p>
-            </div>
-
+<section>
+    <h2>Experience</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Infosys Ltd</h3>
+            <p><b>Senior Associate Consultant</b> (Apr 2024 – Present)</p>
+            <ul>
+                <li>UKG–LinkedIn integration for job applications</li>
+                <li>Data validation and workflow enhancements</li>
+            </ul>
         </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>📞 +91 95901 05503</p>
-        <p>📧 goudapatil567@gmail.com</p>
-        <p>
-            🔗 <a href="https://github.com/veeranagoudapatil" target="_blank">
-                github.com/veeranagoudapatil
-            </a>
-        </p>
-    </section>
+        <div class="card">
+            <h3>Altruist Technologies</h3>
+            <p><b>Software Engineer</b> (Apr 2023 – Mar 2024)</p>
+            <ul>
+                <li>Java microservices for aviation operations</li>
+                <li>REST APIs, Oracle/PostgreSQL integration</li>
+            </ul>
+        </div>
 
-</main>
+        <div class="card">
+            <h3>Idisha Info Labs (Quick Ride)</h3>
+            <p><b>Software Engineer</b> (Dec 2020 – Feb 2023)</p>
+            <ul>
+                <li>Backend for ride booking & payments</li>
+                <li>Kafka & Redis for async processing</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+    <p>📞 +91 9590105503</p>
+    <p>✉️ goudapatil567@gmail.com</p>
+    <p>🐙 <a href="https://github.com/veeranagoudapatil" target="_blank">GitHub</a></p>
+</section>
 
 <footer>
     © 2026 Veeranagouda Patil
 </footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark');
+    }
+</script>
 
 </body>
 </html>
